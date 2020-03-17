@@ -1,10 +1,29 @@
+{%load user_tags%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<h1>Users</h1>
+
+
+<ul>
+{% for user in user_list %}
+    <li>{{ user.username }} - {{ user.random_number_field }}</li>
+    <a href="{% url 'milo_app:edit-user' user.pk %}">Edit User</a>
+    <a href="{% url 'milo_app:delete-user' user.pk %}">Delete User</a>
+    <a href="{% url 'milo_app:user-details' user.pk %}">Show Details</a>
+    {% is_under_13 user.birthday_date as flag %}
+    <p>{{ flag }}</p>
+    {% bizz_fuzz user.random_number_field as bizzfuzz %}
+    <p>{{ bizzfuzz }}</p>
+
+{% empty %}
+    <li>No users yet.</li>
+{% endfor %}
+</ul>
+
 </body>
 </html>
