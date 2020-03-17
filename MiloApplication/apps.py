@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class MiloapplicationConfig(AppConfig):
+class MiloApplicationConfig(AppConfig):
     name = 'MiloApplication'
