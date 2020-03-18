@@ -1,0 +1,11 @@
+Completed:
+- the work environment has been set up
+- user model added
+- appropriate display views like adding, editing and deleting users have been added and url mapping has been configured
+- appropriate html views were added
+- the appropriate template tags has been implemented
+- html views has been improved (via bootstrap and crispy-forms libraries)
+- support for rendering CSV files has been added
+
+Not completed:
+- unit tests (lack of knowledge of the topic)

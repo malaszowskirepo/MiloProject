@@ -17,10 +17,11 @@
         <a class="btn btn-danger" href="{% url 'milo_app:delete-user' user.pk %}">Delete User</a>
         <a class="btn btn-warning" href="{% url 'milo_app:user-details' user.pk %}">Show Details</a>
     {% empty %}
-        <li>No users yet.</li>
+        <p>No users yet.</p>
+         </li>
     {% endfor %}
-    </li>
 </ul>
+<a class="btn btn-success" style="margin-top: 30px" href="{% url 'milo_app:render-to-csv'%}">Render to CSV</a>
 </div>
 </ul>
 {% endblock %}
