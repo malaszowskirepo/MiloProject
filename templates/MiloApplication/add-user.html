@@ -4,10 +4,11 @@
 <title>Add user</title>
 {% endblock %}
 {% block body %}
-<form action="" method="post">
-    {% csrf_token %}
-    {{ form.as_p|crispy }}
-    <input type="submit" value="Save" />
-</form>
+    <div class="container" style="padding-right: 20%; padding-left: 20%">
+    {%crispy form%}
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="submit" class="btn btn-success" value="Add User" />
+    </form>
+    </div>
 {% endblock %}
-

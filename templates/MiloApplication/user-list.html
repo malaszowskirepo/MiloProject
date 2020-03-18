@@ -15,7 +15,7 @@
             <p style="font-size: 20px">{{ user.username }} - {{ flag }} - {{ bizzfuzz }}</p>
         <a class="btn btn-success" href="{% url 'milo_app:edit-user' user.pk %}">Edit User</a>
         <a class="btn btn-danger" href="{% url 'milo_app:delete-user' user.pk %}">Delete User</a>
-        <a class="btn btn-success" href="{% url 'milo_app:user-details' user.pk %}">Show Details</a>
+        <a class="btn btn-warning" href="{% url 'milo_app:user-details' user.pk %}">Show Details</a>
     {% empty %}
         <li>No users yet.</li>
     {% endfor %}

@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 {% block head %}
 <title>Edit user</title>
 {% endblock %}
 {% block body %}
-<form action="" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Save" />
-</form>
+        <div class="container" style="padding-right: 20%; padding-left: 20%">
+        {%crispy form%}
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="submit" class="btn btn-success" value="Edit User" />
+        </form>
+        </div>
 {% endblock %}
 

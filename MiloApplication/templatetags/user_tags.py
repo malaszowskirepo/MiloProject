@@ -13,7 +13,6 @@ def is_under_13(birthdate):
 
 @register.simple_tag
 def bizz_fuzz(number):
-    print("test" + str(number))
     if number % 3 == 0 and number % 5 == 0:
         return "BizzFuzz"
     elif number % 3 == 0:
