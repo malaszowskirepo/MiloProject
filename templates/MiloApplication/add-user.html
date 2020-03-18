@@ -1,18 +1,13 @@
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-<script>
-  $(function() {
-    $( ".datepicker" ).datepicker({ dateFormat: 'yy-mm-dd' });
-
-
-  });
-</script>
-
-
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block head %}
+<title>Add user</title>
+{% endblock %}
+{% block body %}
 <form action="" method="post">
     {% csrf_token %}
-    {{ form.as_p }}
+    {{ form.as_p|crispy }}
     <input type="submit" value="Save" />
 </form>
+{% endblock %}
 

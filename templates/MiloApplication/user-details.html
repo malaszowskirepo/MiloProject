@@ -1,7 +1,15 @@
-<p>{{ user.username }}</p>
-<p>{{ user.first_name }}</p>
-<p>{{ user.last_name }}</p>
-<p>{{ user.email }}</p>
-<p>{{ user.password }}</p>
-<p>{{ user.birthday_date }}</p>
-<p>{{ user.random_number_field }}</p>
+{% extends 'base.html' %}
+{% block head %}
+<title>User details</title>
+{% endblock %}
+{% block body %}
+    <ul style="font-size: 20px">
+    <li>User login: {{ user.username }}</li>
+    <li>User first name: {{ user.first_name }}</li>
+    <li>User last name: {{ user.last_name }}</li>
+    <li>User email: {{ user.email }}</li>
+    <li>User password: {{ user.password }}</li>
+    <li>User birthday: {{ user.birthday_date }}</li>
+    <li>User random number: {{ user.random_number_field }}</li>
+    </ul>
+{% endblock %}
