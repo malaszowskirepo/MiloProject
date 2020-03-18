@@ -5,9 +5,9 @@
 {% endblock %}
 {% block body %}
         <div class="container" style="padding-right: 20%; padding-left: 20%">
-        {%crispy form%}
         <form action="" method="post">
             {% csrf_token %}
+            {{ form|crispy }}
             <input type="submit" class="btn btn-success" value="Edit User" />
         </form>
         </div>
